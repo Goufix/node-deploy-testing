@@ -6,8 +6,5 @@ const routes = Router();
 
 routes.use('/users', usersRouter);
 routes.use('/auth', authRouter);
-routes.get('/', () => {
-  return `<h1>Funcionou</h1>`
-})
 
 export default routes;

@@ -5,5 +5,8 @@ const authRouter = Router();
 const controller = new AuthController();
 
 authRouter.post('/', controller.authUser);
+authRouter.get('/', (r, res) => {
+  res.json({ ok: 'funciona' });
+});
 
 export default authRouter;

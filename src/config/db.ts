@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-export default (configs?: any): void => {
+export default (configs?: mongoose.ConnectionOptions): void => {
   const { DB_HOST } = process.env;
   const { connect } = mongoose;
   const uri = `mongodb://${DB_HOST}/my_database`;
