@@ -17,7 +17,6 @@ jobs:
     - name: tsc
       uses: icrawl/action-tsc@v1
     - name: copy pm2
-      uses: canastro/copy-file-action@master
         run: cp pm2.json dist/pm2.json
     - name: copy packages
         run: cp package.json dist/package.json
