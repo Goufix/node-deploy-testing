@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "exec pm2-runtime start pm2.json",
-    "build": "tsc && yarn start",
+    "copy:files": "cp package.json dist/package.json && cp Dockerfile dist/dockerfile && cp pm2.json dist/pm2.json",
     "dev:server": "ts-node-dev --transpileOnly --ignore-watch node_modules index.ts"
   },
   "repository": {

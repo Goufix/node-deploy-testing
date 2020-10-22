@@ -16,6 +16,8 @@ jobs:
       run: yarn install
     - name: tsc
       run: yarn tsc
+    - name: copy files
+      run: yarn copy:files
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@v2.1.5
       env:
