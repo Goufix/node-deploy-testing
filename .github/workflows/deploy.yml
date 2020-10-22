@@ -16,23 +16,16 @@ jobs:
       run: yarn install
     - name: tsc
       run: icrawl/action-tsc@v1
-  setup-runtime:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
     - name: copy pm2
       uses: canastro/copy-file-action@master
       with:
         source: "pm2.json"
         target: "dist/pm2.json"
-    - name: copy pm2
+    - name: copy packages
       uses: canastro/copy-file-action@master
       with:
         source: "package.json"
         target: "dist/package.json"
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
     - uses: actions/checkout@v1
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@v2.1.5
