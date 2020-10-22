@@ -20,12 +20,12 @@ jobs:
       uses: canastro/copy-file-action@master
       with:
         source: "pm2.json"
-        target: "dist/"
+        target: "dist/pm2.json"
     - name: copy packages
       uses: canastro/copy-file-action@master
       with:
         source: "package.json"
-        target: "dist/"
+        target: "dist/package.json"
     - uses: actions/checkout@v1
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@v2.1.5
